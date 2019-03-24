@@ -1,0 +1,35 @@
+{
+  "name": "wdmg/yii2-reviews",
+  "description": "Users reviews system for Yii2",
+  "keywords": ["yii2", "yii2-reviews", "reviews system", "wdmg"],
+  "type": "yii2-extension",
+  "license": "MIT",
+  "version": "0.0.1",
+  "homepage": "https://github.com/wdmg/yii2-reviews",
+  "support": {
+    "source": "https://github.com/wdmg/yii2-reviews",
+    "issues": "https://github.com/wdmg/yii2-reviews/issues"
+  },
+  "authors": [
+    {
+      "name": "Alexsander Vyshnyvetskyy",
+      "email": "alex.vyshnyvetskyy@gmail.com"
+    },
+    {
+      "name": "W.D.M.Group, Ukraine",
+      "email": "wdmg.com.ua@gmail.com"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "^2.0.13"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "wdmg\\reviews\\": ""
+    }
+  },
+  "extra": {
+    "bootstrap": "wdmg\\reviews\\Bootstrap"
+  }
+}
