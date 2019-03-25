@@ -37,8 +37,7 @@ class m240319_125044_reviews extends Migration
             'session' => $this->string(32)->notNull(),
             'is_published' => $this->boolean(),
         ], $tableOptions);
-
-        $this->createIndex('idx_reviews_parent','{{%reviews}}', ['parent_id'],false);
+        
         $this->createIndex('idx_reviews_user','{{%reviews}}', ['user_id'],false);
 
         $this->createIndex('idx_reviews_name','{{%reviews}}', ['name'],false);
@@ -68,7 +67,6 @@ class m240319_125044_reviews extends Migration
      */
     public function safeDown()
     {
-        $this->dropIndex('idx_reviews_parent', '{{%reviews}}');
         $this->dropIndex('idx_reviews_user', '{{%reviews}}');
         
         $this->dropIndex('idx_reviews_name', '{{%reviews}}');
