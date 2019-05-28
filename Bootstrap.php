@@ -20,15 +20,32 @@ class Bootstrap implements BootstrapInterface
         $module = Yii::$app->getModule('reviews');
 
         // Get URL path prefix if exist
-        $prefix = (isset($module->routePrefix) ? $module->routePrefix . '/' : '');
+        if (isset($module->routePrefix)) {
+            $app->getUrlManager()->enableStrictParsing = true;
+            $prefix = $module->routePrefix . '/';
+        } else {
+            $prefix = '';
+        }
 
         // Add module URL rules
         $app->getUrlManager()->addRules(
             [
                 $prefix . '<module:reviews>/' => '<module>/reviews/index',
-                $prefix . '<module:reviews>/<controller>/' => '<module>/<controller>',
-                $prefix . '<module:reviews>/<controller>/<action>' => '<module>/<controller>/<action>',
-                $prefix . '<module:reviews>/<controller>/<action>' => '<module>/<controller>/<action>',
+                $prefix . '<module:reviews>/<controller:\w+>/' => '<module>/<controller>',
+                $prefix . '<module:reviews>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
+                [
+                    'pattern' => $prefix . '<module:reviews>/',
+                    'route' => '<module>/reviews/index',
+                    'suffix' => '',
+                ], [
+                'pattern' => $prefix . '<module:reviews>/<controller:\w+>/',
+                'route' => '<module>/<controller>',
+                'suffix' => '',
+            ], [
+                'pattern' => $prefix . '<module:reviews>/<controller:\w+>/<action:\w+>',
+                'route' => '<module>/<controller>/<action>',
+                'suffix' => '',
+            ],
             ],
             true
         );

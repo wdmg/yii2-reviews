@@ -8,16 +8,19 @@ use yii\helpers\Html;
 $this->title = Yii::t('app/modules/reviews', 'Update Reviews: {name}', [
     'name' => $model->name,
 ]);
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app/modules/reviews', 'Reviews'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => $this->context->module->name, 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = Yii::t('app/modules/reviews', 'Update');
 ?>
+<div class="page-header">
+    <h1>
+        <?= Html::encode($this->title) ?> <small class="text-muted pull-right">[v.<?= $this->context->module->version ?>]</small>
+    </h1>
+</div>
 <div class="reviews-update">
-
-    <h1><?= Html::encode($this->title) ?></h1>
-
     <?= $this->render('_form', [
         'model' => $model,
     ]) ?>
-
 </div>
+
+<?php echo $this->render('../_debug'); ?>

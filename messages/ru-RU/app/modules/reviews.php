@@ -1,7 +1,8 @@
 <?php
 
 return [
-    'Reviews' => "Отзывы"
+    'Reviews' => "Отзывы",
+    'Users reviews system' => "Система отзывов пользователей",
 ];
 
 ?>
