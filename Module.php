@@ -6,7 +6,7 @@ namespace wdmg\reviews;
  * Yii2 Reviews system
  *
  * @category        Module
- * @version         0.0.4
+ * @version         0.0.5
  * @author          Alexsander Vyshnyvetskyy <alex.vyshnyvetskyy@gmail.com>
  * @link            https://github.com/wdmg/yii2-reviews
  * @copyright       Copyright (c) 2019 W.D.M.Group, Ukraine
@@ -29,7 +29,7 @@ class Module extends \yii\base\Module
     /**
      * {@inheritdoc}
      */
-    public $defaultRoute = 'default';
+    public $defaultRoute = "reviews/index";
 
     /**
      * @var string the prefix for routing of module
@@ -54,7 +54,7 @@ class Module extends \yii\base\Module
     /**
      * @var string the module version
      */
-    private $version = "0.0.4";
+    private $version = "0.0.5";
 
     /**
      * @var integer, priority of initialization
