@@ -18,7 +18,7 @@ use Yii;
 use wdmg\base\BaseModule;
 
 /**
- * reviews module definition class
+ * Reviews module definition class
  */
 class Module extends BaseModule
 {
