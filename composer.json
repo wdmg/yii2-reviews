@@ -21,7 +21,8 @@
     }
   ],
   "require": {
-    "yiisoft/yii2": "^2.0.20"
+    "yiisoft/yii2": "^2.0.20",
+    "wdmg/yii2-base": "^1.0.1"
   },
   "minimum-stability": "dev",
   "autoload": {
