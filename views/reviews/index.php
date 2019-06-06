@@ -17,7 +17,6 @@ $this->params['breadcrumbs'][] = $this->title;
 </div>
 <div class="reviews-index">
     <?php Pjax::begin(); ?>
-
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,

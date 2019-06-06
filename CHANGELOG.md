@@ -1,6 +1,9 @@
 Changelog
 =========
 
+## 0.0.7 (2019-06-07)
+ * Module refactoring
+
 ## 0.0.6 (2019-06-05)
  * Module transferred to base module interface. Update Yii2 version.
 
