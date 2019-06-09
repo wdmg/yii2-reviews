@@ -1,10 +1,10 @@
 {
   "name": "wdmg/yii2-reviews",
-  "description": "Users reviews system for Yii2",
+  "description": "Users reviews system",
   "keywords": ["yii2", "yii2-reviews", "reviews system", "wdmg"],
   "type": "yii2-extension",
   "license": "MIT",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "homepage": "https://github.com/wdmg/yii2-reviews",
   "support": {
     "source": "https://github.com/wdmg/yii2-reviews",

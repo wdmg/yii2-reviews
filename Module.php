@@ -6,7 +6,7 @@ namespace wdmg\reviews;
  * Yii2 Reviews system
  *
  * @category        Module
- * @version         0.0.7
+ * @version         0.0.8
  * @author          Alexsander Vyshnyvetskyy <alex.vyshnyvetskyy@gmail.com>
  * @link            https://github.com/wdmg/yii2-reviews
  * @copyright       Copyright (c) 2019 W.D.M.Group, Ukraine
@@ -18,7 +18,7 @@ use Yii;
 use wdmg\base\BaseModule;
 
 /**
- * reviews module definition class
+ * Reviews module definition class
  */
 class Module extends BaseModule
 {
@@ -45,7 +45,7 @@ class Module extends BaseModule
     /**
      * @var string the module version
      */
-    private $version = "0.0.7";
+    private $version = "0.0.8";
 
     /**
      * @var integer, priority of initialization
