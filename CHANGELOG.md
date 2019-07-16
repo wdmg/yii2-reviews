@@ -1,6 +1,9 @@
 Changelog
 =========
 
+## 0.0.9 (2019-07-16)
+ * Added extra options to composer.json and navbar menu icon
+
 ## 0.0.8 (2019-06-09)
  * Added choice param for non interactive mode
 
