@@ -51,7 +51,7 @@ class Reviews extends \yii\db\ActiveRecord
         ];
 
         if(class_exists('\wdmg\users\models\Users') && isset(Yii::$app->modules['users']))
-            $rules[] = [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => \wdmg\users\models\Users::className(), 'targetAttribute' => ['user_id' => 'id']];
+            $rules[] = [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => \wdmg\users\models\Users::class, 'targetAttribute' => ['user_id' => 'id']];
 
         return $rules;
     }
@@ -85,6 +85,6 @@ class Reviews extends \yii\db\ActiveRecord
      */
     public function getUser()
     {
-        return $this->hasOne(Users::className(), ['id' => 'user_id']);
+        return $this->hasOne(Users::class, ['id' => 'user_id']);
     }
 }

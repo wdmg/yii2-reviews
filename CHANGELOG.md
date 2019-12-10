@@ -1,6 +1,9 @@
 Changelog
 =========
 
+## 0.0.10 (2019-12-10)
+ * Fixed deprecated class declaration
+
 ## 0.0.9 (2019-07-16)
  * Added extra options to composer.json and navbar menu icon
 
