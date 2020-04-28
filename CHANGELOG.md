@@ -1,6 +1,11 @@
 Changelog
 =========
 
+## 0.0.11 (2020-04-28)
+ * Update README.md and dependencies versions
+ * Updating year in copyrights
+ * Change icon class (FontAwesome update)
+ 
 ## 0.0.10 (2019-12-10)
  * Fixed deprecated class declaration
 
