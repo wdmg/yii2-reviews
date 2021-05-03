@@ -44,10 +44,10 @@ class Reviews extends \yii\db\ActiveRecord
             [['user_id', 'rating', 'is_published'], 'integer'],
             [['name', 'email', 'condition', 'session'], 'required'],
             [['review'], 'string'],
-            [['created_at', 'updated_at'], 'safe'],
             [['name', 'email', 'phone', 'session'], 'string', 'max' => 32],
             [['photo', 'condition'], 'string', 'max' => 64],
             [['advantages', 'disadvantages'], 'string', 'max' => 255],
+            [['created_at', 'updated_at'], 'safe'],
         ];
 
         if(class_exists('\wdmg\users\models\Users') && isset(Yii::$app->modules['users']))
@@ -86,5 +86,21 @@ class Reviews extends \yii\db\ActiveRecord
     public function getUser()
     {
         return $this->hasOne(Users::class, ['id' => 'user_id']);
+    }
+
+    /**
+     * Return stats count by all users
+     *
+     * @return array|null
+     */
+    public static function getStatsCount($asArray = false) {
+        $counts = static::find()
+            ->select([new \yii\db\Expression('SUM( CASE WHEN `created_at` >= TIMESTAMP(CURRENT_TIMESTAMP() - INTERVAL 1 DAY) THEN 1 END ) AS count')])
+            ->addSelect([new \yii\db\Expression('SUM( CASE WHEN `id` > 0 THEN 1 END ) AS total')]);
+
+        if ($asArray)
+            return $counts->asArray()->one();
+
+        return $counts->one();
     }
 }

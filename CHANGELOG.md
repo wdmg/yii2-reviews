@@ -1,6 +1,9 @@
 Changelog
 =========
 
+## 0.0.*
+ * Added counter stats method
+ 
 ## 0.0.11 (2020-04-28)
  * Update README.md and dependencies versions
  * Updating year in copyrights
