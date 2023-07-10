@@ -4,7 +4,7 @@
   "keywords": ["yii2", "yii2-reviews", "reviews system", "wdmg"],
   "type": "yii2-extension",
   "license": "MIT",
-  "version": "0.0.11",
+  "version": "0.1.0",
   "homepage": "https://github.com/wdmg/yii2-reviews",
   "support": {
     "source": "https://github.com/wdmg/yii2-reviews",

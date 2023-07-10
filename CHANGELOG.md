@@ -1,7 +1,8 @@
 Changelog
 =========
 
-## 0.0.*
+## 0.1.0 (2023-07-10)
+ * Update copyrights, fix menu dashboard
  * Added counter stats method
  
 ## 0.0.11 (2020-04-28)
